@@ -1,0 +1,34 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+    <!--
+          model.addAttribute("userName", "优就业");
+          model.addAttribute("href", "http://www.ujiuye.com");
+          return "index4";
+    -->
+    <!--
+        1、字符串拼接第一种方式,直接拼接,当时用div等块级标签的时候无法拼接
+    -->
+    你好,<span th:text="${userName}"></span><br/>
+    你好,<div th:text="${userName}"></div><br/>
+    <hr/>
+
+    <!--
+        2、字符串拼接的第二种方式,直接拼接
+    -->
+    <span th:text="'垃圾'+${userName}"></span><br/>
+    <div th:text="'垃圾'+${userName}"></div><br/>
+    <hr/>
+
+    <!--
+        3、使用 | 进行拼接
+    -->
+    <span th:text="|中公${userName},开始骗钱了|"></span><br/>
+    <div th:text="|中公${userName},开始骗钱了|"></div><br/>
+</body>
+</html>

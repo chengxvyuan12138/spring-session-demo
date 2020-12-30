@@ -1,0 +1,37 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+    <!--
+       引入片段的方式:
+            1、th:insert="~{html名 :: id名}"     把片段的内容插入到当前位置
+            2、th:replace="~{html名 :: id名}"     用片段的标签,代替当前的主标签
+            3、th:include="~{html名 :: id名}"     保留自己的主标题,不要片段的注标题
+    -->
+    <div th:insert="~{footer :: copy}"></div><br/>
+    <hr/>
+    <div th:replace="~{footer :: copy}"></div><br/>
+    <hr/>
+    <div th:include="~{footer :: copy}"></div><br/>
+    <hr/>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,18 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+    <!--
+        使用模板引擎Thymeleaf进行操作的步骤:
+            1、在controller,定义好需要的数据,通过model.addAttribute(key,value)进行绑定
+            2、return跳转静态页面
+            3、静态页面中引入约束xmlns="http://www.w3.org/1999/xhtml"和xmlns:th="http://www.thymeleaf.org"
+            4、定义标签,使用th:text,引入数据
+    -->
+    <h1 th:text="${message}"></h1>
+</body>
+</html>

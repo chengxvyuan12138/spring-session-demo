@@ -1,0 +1,44 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+<table width="200" style="text-align: center;">
+    <tr>
+        <th>编号</th>
+        <th>姓名</th>
+        <th>年龄</th>
+        <th>index</th>
+    </tr>
+
+    <!--
+        List<User> list=new ArrayList<User>();
+        User u1 = new User(1,"东方海阁",12);
+        User u2 = new User(2,"西门小天",13);
+        User u3 = new User(3,"南宫成",14);
+        User u4 = new User(4,"北冥雪地",15);
+        list.add(u1);
+        list.add(u2);
+        list.add(u3);
+        list.add(u4);
+        model.addAttribute("userList", list);
+    -->
+    <!--
+        循环:使用 变量名 : ${集合}
+        如果需要使用状态变量的属性,则需要加上一个状态变量XXX
+        格式如下:
+            变量名,状态变量:${集合}
+    -->
+    <tr th:each="pojo,Status: ${userList}">
+        <td th:text="${pojo.id}"></td>
+        <td th:text="${pojo.name}"></td>
+        <td th:text="${pojo.age}"></td>
+        <td th:text="${Status.index}"></td>
+    </tr>
+
+</table>
+</body>
+</html>

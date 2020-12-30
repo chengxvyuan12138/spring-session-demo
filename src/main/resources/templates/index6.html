@@ -1,0 +1,19 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <!--
+        为了解决部署的时候和测试的时候地址不一致的问题,测试的时候采用href的地址,而部署则采用th:href地址
+    -->
+    <!--<link rel="stylesheet" type="text/css" media="all"  href="../static/css/gtvg.css"  th:href="@{/css/gtvg.css   }" />-->
+    <!--
+        如果直接使用下面的href路径,在部署的时候会出错,所以需要使用上面的地址,经过渲染过后会变成下面的地址
+    -->
+    <link rel="stylesheet" type="text/css" media="all" href="/static/css/gtvg.css"  />
+</head>
+<body>
+
+</body>
+</html>

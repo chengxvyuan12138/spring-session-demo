@@ -1,0 +1,32 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+    <!--
+          model.addAttribute("flag", "yes");
+          model.addAttribute("menu", "admin");
+          model.addAttribute("manager", "manager");
+    -->
+    <!--
+        1、th:if 条件成立时显示
+    -->
+    <h1 th:if="${tag}">在使用if时,tag为true的情况下显示</h1>
+
+    <!--
+        2、th:unless 条件不成立是显示
+    -->
+    <h1 th:unless="${tag}">在使用unless时,tag为true的情况下显示</h1>
+
+    <!--
+        3、选择switch...case...case
+    -->
+    <div th:switch="${menu}">
+        <h4 th:case="admin">User is  a admin</h4>
+        <h4 th:case="manager">User is  a manager</h4>
+    </div>
+</body>
+</html>

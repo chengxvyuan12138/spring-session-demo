@@ -1,0 +1,42 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+    <!--
+        String message = "this is a temp";             文本
+        User user = new User(1,"东方海阁",12);          对象
+        Map<String,Object> map=new HashMap<>();
+        map.put("src1","3.jpg");                       图片
+        map.put("src2","2.jpg");
+        model.addAttribute("message", message);
+        model.addAttribute("user", user);
+        model.addAttribute("src", map);
+        return "index2";
+    -->
+
+    <!--
+        文本  th:text
+    -->
+         <span th:text="${message}"></span><br/>
+
+
+    <!--
+        对象  th:text
+    -->
+    编号:<span th:text="${user.id}"/><br/>
+    姓名:<span th:text="${user.name}"/><br/>
+    年龄:<span th:text="${user.age}"/><br/>
+
+    <!--
+        图片    th:src="图片地址"
+    -->
+    <img th:src="${src.src1}"/><br/>
+    <img th:src="${src.src2}"/><br/>
+
+
+</body>
+</html>

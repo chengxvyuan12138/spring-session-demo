@@ -1,0 +1,12 @@
+server:
+  port: 8787
+spring:
+  redis:
+    host: 192.168.188.128
+    post: 6379
+    password: offcn123
+  session:
+    store-type: redis # session �Ĵ洢��ʽ
+    timeout: 1800 # session ����ʱ�� ��λ:��
+  thymeleaf:  #��ʼthymeleaf����
+    cache: false # ����ģ�建��
